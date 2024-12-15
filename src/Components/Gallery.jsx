@@ -7,6 +7,8 @@ import gall6 from "../assets/img/gallery/gallery-img-06.jpg";
 
 import PropTypes from 'prop-types';
 
+const images = [gall1, gall2, gall3, gall4, gall5, gall6];
+
 
 export default function Gallery ({
     onClickintro,
@@ -29,62 +31,21 @@ export default function Gallery ({
                                 This gallery contains a beautiful hover effect and pop-up larger images. Please mention TemplateMo site to your friends.
                             </p>
                         </div>
-                        <div className="grid grid-cols-2 gap-7 mt-8">
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall1} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
+                        <div className="grid grid-cols-2 gap-7 mt-8">                            
 
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall2} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
-
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall3} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
-
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall4} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
-
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall5} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
-
-                            <div className="group relative w-full">
-                                <img className="block w-full h-auto" src={gall6} alt="" />
-                                 <div className="lay ">
-                                    <p className="lay-text">
-                                        Vericard is reliable source for projects
-                                    </p>
-                                 </div>
-                            </div>
-
-                            
+                            {
+                                images.map((src, index) => (
+                                    <div key={index} className="group relative w-full">
+                                        <img className="block w-full h-auto" src={src} alt={`gallary images ${index + 1}`} />
+                                        <div className="lay ">
+                                            <p className="lay-text">
+                                                Vericard is reliable source for projects
+                                            </p>
+                                        </div>
+                                    </div>  
+                                    
+                                ))
+                            }                                                     
                             
                         </div>
 

@@ -8,7 +8,7 @@
 }
 
 .lay-text {
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white text-lg font-extrabold border-2 border-neutral-700 px-20 
+  @apply absolute top-3 left-3 right-3 bottom-3 transform  text-center text-white text-lg font-extrabold border-2 border-neutral-700 px-3 py-10
 }
 
 
